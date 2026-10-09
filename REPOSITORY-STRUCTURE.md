@@ -1,43 +1,58 @@
-# Suggested GitHub organization structure
+# Style 615 — GitHub Organization Structure
 
-GitHub organization profile: `.github/profile/README.md` in a public repository named `.github`.
+**Private Development · Proprietary Software · Public Product Information**
 
-## Public repositories (only when source publication is approved)
-- `s615-sentinel` — Server monitoring and alerting
-- `s615-hub` — WordPress ecosystem control center
-- `s615-booking` — WordPress appointment and reservation management
-- `s615-mail` — WordPress email and forms platform
-- `s615-menu` — Restaurant menu management for WordPress
-- `s615-analytics` — Privacy-focused analytics for WordPress
-- `s615-translator` — WordPress multilingual content management
-- `s615-shield` — WordPress security toolkit
-- `s615-seo` — WordPress SEO toolkit
-- `s615-reviews` — Reviews integration and display
-- `s615-consent` — Consent management for WordPress
-- `s615-fonts` — Local font and typography management
-- `s615-cache` — WordPress performance toolkit
-- `s615-users` — WordPress user management
-- `s615-portfolio` — WordPress portfolio and gallery tools
-- `s615-import-export` — WordPress content migration
+This document proposes a private-first GitHub organization for Style 615 (S615). Repository names below are recommendations, not a claim that these repositories already exist.
 
-## Internal or optional repositories
-- `s615-storage`, `s615-cloud`, `s615-vault`, `s615-backup`, `s615-hosting` — publish only if suitable for open source
-- `s615-docs` — product documentation
-- `s615-infrastructure` — PRIVATE infrastructure-as-code (never publish secrets)
-- `s615-brand` — brand assets with explicit reuse terms
+## Public — documentation only
 
-## Repository README pattern
-1. Product name and one-line value proposition
-2. What it does / key features
-3. Requirements and compatibility
-4. Installation and configuration
-5. Security and privacy considerations
-6. Screenshots or usage examples
-7. Documentation and support links
-8. License and contribution rules
+| Repository | Purpose |
+| --- | --- |
+| `.github` | Organization profile |
+| `s615-ecosystem` | Product catalog and descriptions |
+| `s615-docs` | Approved public guides and FAQs |
+| `s615-portfolio` | Approved client case studies (not the Portfolio plugin source) |
 
-## Organization settings
-- Add website `https://615.eu` and contact `info@615.eu`.
-- Use clear topics: `wordpress`, `self-hosted`, `privacy`, `monitoring`, `cloud`, `web-development`.
-- Pin only repositories that exist and are ready for visitors.
-- Publish licenses only after choosing the actual terms; do not assume all S615 products are open source.
+Public repositories contain **no source code, plugin ZIPs, credentials, customer data, internal network diagrams, or deployment secrets**.
+
+## Private — WordPress plugins
+
+`s615-hub`, `s615-booking`, `s615-mail`, `s615-menu`, `s615-analytics`, `s615-translator`, `s615-shield`, `s615-seo`, `s615-reviews`, `s615-consent`, `s615-fonts`, `s615-cache`, `s615-users`, `s615-portfolio-plugin`, `s615-import-export`.
+
+## Private — cloud and operations
+
+`s615-sentinel`, `s615-storage`, `s615-cloud`, `s615-vault`, `s615-backup`, `s615-hosting`, `s615-infrastructure`.
+
+Although Sentinel has been described on the website as open-source, keep its source private unless and until publication is explicitly approved. If an existing public repository already exists, changing it to private does **not** revoke previous clones or copies.
+
+## Private repository README checklist
+
+1. Product purpose and capabilities
+2. Requirements and supported versions
+3. Internal setup and configuration
+4. Architecture and dependencies
+5. Security, privacy and data handling
+6. Testing and release procedure
+7. Changelog and ownership
+8. Distribution and licensing status
+
+Suggested heading: **Internal software — not for public distribution**. This is an internal policy statement, not a substitute for legal licensing terms.
+
+## Development workflow
+
+Use a private GitHub Project named **S615 Development** with `Backlog → Planned → In Progress → Testing → Completed`. Use Issues, protected branches, pull requests, and private CI workflows. Keep secrets in a dedicated secrets manager or GitHub encrypted secrets, never in Git history.
+
+## Organization security
+
+- Website: https://615.eu · Contact: info@615.eu
+- Default new code repositories to **Private**
+- Limit who can create public repositories or change visibility
+- Enable 2FA, least-privilege roles, branch protection and secret scanning where available
+- Review access and public repository contents before each release
+- Do not add GPL, MIT, or another license by default without reviewing applicable obligations, including those arising from WordPress/GPL components
+
+## Distribution decision
+
+No public source releases, free downloads, or blanket open-source commitments are planned at present. Decisions about selling, licensing, publishing, or distributing each product will be made separately.
+
+© 2026 Style 615 · https://615.eu
