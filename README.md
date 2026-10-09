@@ -31,6 +31,11 @@ We have been building websites since 2002 and operating as a registered business
 | SEO and online advertising | Private hosting and S3-compatible storage |
 | Digital experiences and websites | Monitoring, encrypted backups, password management |
 
+
+## Software availability
+
+S615 product listings on this profile are informational. Source code, plugin installation packages, and private infrastructure are **not publicly distributed through this GitHub organization** at this time. Product availability and licensing are determined individually. No open-source license or free download is implied by a product listing.
+
 ## S615 software ecosystem
 
 Our products are developed to solve problems encountered in real projects. Deployments can be managed by us or, where supported, installed on customer-owned infrastructure.
@@ -72,7 +77,7 @@ Explore the [full product ecosystem](https://615.eu/ecosystem/).
 
 | Project | Year | Work |
 | --- | --- | --- |
-| [S615 Sentinel](https://615.eu/portfolio/s615-sentinel/) | 2025 | Open-source server monitoring with uptime, SSL, performance, directory-user checks, and Telegram alerts |
+| [S615 Sentinel](https://615.eu/portfolio/s615-sentinel/) | 2025 | Server monitoring with uptime, SSL, performance, directory-user checks, and Telegram alerts |
 | [Sofiko](https://615.eu/portfolio/sofikoee/) | 2026 | Restaurant branding, website, menu, booking, SEO, and hosting |
 | [S615 Plugin Pack](https://615.eu/portfolio/s615-plugin-pack/) | 2024–2026 | Integrated WordPress plugin ecosystem |
 | [Tellihinkali](https://615.eu/portfolio/tellihinkali/) | 2021 | Restaurant branding, website, graphic design, SEO, and social media |
